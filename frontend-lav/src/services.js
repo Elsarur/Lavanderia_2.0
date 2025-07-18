@@ -1,6 +1,6 @@
 import { Container, Card, Button, Row, Col, Form } from "react-bootstrap";
 
-function ServicesView() {
+function ServiceView() {
   return (
     <Container className="py-5 d-flex justify-content-center">
       <Card className="shadow w-100" style={{ maxWidth: "700px" }}>
@@ -42,4 +42,4 @@ function ServicesView() {
   );
 }
 
-export default ServicesView;
+export default ServiceView;

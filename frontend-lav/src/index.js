@@ -15,9 +15,9 @@ import UpdateClient from './update_client';
 import CreateOrder from '../../frontend-lav/src/CreateOrder';
 import App from './resumen';
 import GarmentView from './Garments';
-import ServicesView from './services';
+import ServicesView from './ServicesView';
 //import { CreateOrder } from './orders/CreateOrder';
-
+import GarmentsView from './GarmentView'; 
 const router = createBrowserRouter([
  /*  {
     path: "/register",
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     element: <FullView />,
   },
     {
-    path: '/resumen',
+    path: '/resumen', 
     element: <App/>,
   },
   {
@@ -55,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: '/Services',
     element: <ServicesView/>,
+  },
+   {
+    path: '/GarmentsView',
+    element: <GarmentsView/>,
   },
 
 ]);
