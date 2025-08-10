@@ -1,7 +1,6 @@
 from app.database.db import db
 from datetime import datetime
 
-
 class Client(db.Model):
     __tablename__ = 'clients'
     
@@ -12,15 +11,14 @@ class Client(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.now())
     #relaciones inversas
 
-    orders = db.relationship('Order', backref='client', lazy=True) 
+    orders = db.relationship("Order", backref='clients', lazy=True)
 
-
-    def to_dict(self, orders:bool=False): #lo convierte a librerias     
+    def to_dict(self, orders:bool=False):
         client = {
             'id': self.id,
             'name': self.name,
             'phone_number': self.phone_number,
-            'address': self.address,
+            'address':self.address,
             'created_at': self.created_at,
         }
         if orders:
